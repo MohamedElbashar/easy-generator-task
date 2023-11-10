@@ -8,13 +8,11 @@
     ],
     "scripts": {
         "format": "prettier --write .",
-        "prepare": "husky install",
         "postinstall": "patch-package"
     },
     "devDependencies": {
         "@types/react-csv": "^1.1.3",
         "concurrently": "^8.2.2",
-        "husky": "^7.0.0",
         "patch-package": "^6.4.7",
         "prettier": "2.7.1",
         "prettier-plugin-tailwindcss": "^0.1.13"
@@ -35,6 +33,8 @@
     },
     "homepage": "https://github.com/MohamedElbashar/easy-generator-task#readme",
     "dependencies": {
+        "bson": "^4.5.4",
+        "dayjs": "^1.11.10",
         "i": "^0.3.7",
         "mongoose": "^7.0.3",
         "nodemailer": "^6.8.0",
