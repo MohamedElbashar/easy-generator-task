@@ -1,5 +1,5 @@
 {
-  "name": "@easyGenerator/easy-generator-database",
+  "name": "@easy-generator/easy-generator-database",
   "version": "1.0.0",
   "description": "Mongoose ORM for easy-generator Database v2",
   "main": "./dist/index.js",
