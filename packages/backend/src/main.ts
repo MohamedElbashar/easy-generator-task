@@ -20,7 +20,7 @@ async function bootstrap() {
   SwaggerModule.setup('docs', app, document);
   app.useGlobalPipes(
     new ValidationPipe({
-      transform: true,
+      stopAtFirstError: true,
     }),
   );
 

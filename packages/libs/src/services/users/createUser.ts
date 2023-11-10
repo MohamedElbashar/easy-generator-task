@@ -1,7 +1,11 @@
+import { IAuthCode } from 'src/types/authenticationCode';
 import { OmitBaseProps, Omit_id } from '../../types';
 import { IUser, Users } from '../../types';
+import { createAuthCode } from '../authCode';
 
-export async function createdUser(data: OmitBaseProps<IUser>): Promise<IUser> {
+export async function createdUser(
+  data: OmitBaseProps<IUser>
+): Promise<IAuthCode> {
   const newUser = {
     userName: data.userName,
     password: data.password,
@@ -11,7 +15,5 @@ export async function createdUser(data: OmitBaseProps<IUser>): Promise<IUser> {
   } as Omit_id<IUser>;
 
   const result = await Users.create(newUser);
-  const user = { _id: result._id, ...newUser };
-
-  return user;
+  return await createAuthCode(result._id);
 }

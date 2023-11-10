@@ -10,7 +10,7 @@ const usersSchema = new mongoose.Schema<IUser>(
       validate: {
         validator: function (v: any) {
           const passwordRegex =
-            /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
           return passwordRegex.test(v);
         },
         message: 'Password does not meet the requirements.',
