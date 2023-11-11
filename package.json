@@ -9,7 +9,8 @@
     "scripts": {
         "format": "prettier --write .",
         "postinstall": "patch-package",
-        "build:libs": "npm run build -w packages/libs"
+        "build:libs": "npm run build -w packages/libs",
+        "start:server":"npm run start -w packages/backend"
     },
     "devDependencies": {
         "@types/react-csv": "^1.1.3",
