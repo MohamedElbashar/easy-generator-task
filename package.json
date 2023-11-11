@@ -8,7 +8,8 @@
     ],
     "scripts": {
         "format": "prettier --write .",
-        "postinstall": "patch-package"
+        "postinstall": "patch-package",
+        "build:libs": "npm run build -w packages/libs"
     },
     "devDependencies": {
         "@types/react-csv": "^1.1.3",

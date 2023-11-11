@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 import { type IUser } from './users.interface';
 import { ObjectId } from 'bson';
-
 const usersSchema = new mongoose.Schema<IUser>(
   {
     password: {
@@ -10,7 +9,7 @@ const usersSchema = new mongoose.Schema<IUser>(
       validate: {
         validator: function (v: any) {
           const passwordRegex =
-            /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+            /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]+$/;
           return passwordRegex.test(v);
         },
         message: 'Password does not meet the requirements.',
@@ -31,4 +30,5 @@ const usersSchema = new mongoose.Schema<IUser>(
     collection: 'users',
   }
 );
+
 export const Users = mongoose.model<IUser>('users', usersSchema);

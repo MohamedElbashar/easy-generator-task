@@ -49,7 +49,6 @@ export class AuthController {
   @ApiResponse({ type: AuthCode })
   @HttpCode(HttpStatus.CREATED)
   async signUp(@Body() createUserDto: CreateUserDTO): Promise<AuthCode> {
-    const authCode = await this.authService.signUp(createUserDto);
-    return authCode;
+    return await this.authService.signUp(createUserDto);
   }
 }

@@ -5,7 +5,7 @@ import {
 } from '@easy-generator/easy-generator-database';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
-import dayjs from 'dayjs';
+import * as dayjs from 'dayjs';
 import { AuthCode, AuthenticateDTO, TokenDto } from '../dto';
 import { CreateUserDTO } from '../dto/signup.dto';
 
