@@ -1,7 +1,7 @@
 type LogoProps = {
   main: boolean;
 };
-export default function Logo({ main }: LogoProps) {
+function Logo({ main }: LogoProps) {
   return (
     <div className={`flex${main ? '' : ' items-center justify-center'}`}>
       <svg
@@ -49,3 +49,4 @@ export default function Logo({ main }: LogoProps) {
     </div>
   );
 }
+export default Logo;

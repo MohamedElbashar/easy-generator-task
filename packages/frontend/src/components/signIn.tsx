@@ -7,7 +7,7 @@ const SIGNIN_URL =
 const AUTHENTICATE_URL =
   'https://easy-generator-task-production.up.railway.app/api/auth/authenticate';
 
-export default function SignIn() {
+function SignIn() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -124,3 +124,4 @@ export default function SignIn() {
     </>
   );
 }
+export default SignIn;

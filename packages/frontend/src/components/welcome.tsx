@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-export default function Example() {
+function welcome() {
   const redirectToExternalLink = () => {
     window.location.href = 'https://www.easygenerator.com/';
   };
@@ -64,3 +65,5 @@ export default function Example() {
     </div>
   );
 }
+
+export default welcome;
