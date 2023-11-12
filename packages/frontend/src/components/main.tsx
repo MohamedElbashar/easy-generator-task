@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import { Link } from 'react-router-dom';
-import Logo from './logo';
+import Logo from './helper/logo';
 
 function Main() {
   return (
@@ -21,7 +21,7 @@ function Main() {
             </p>
             <div className="mt-10 flex space-x-4">
               <Link
-                to="/welcome"
+                to="/signIn"
                 className="mr-3 rounded-md bg-orange-400 px-5 py-2.5 text-sm font-medium text-white hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-slate-300"
               >
                 Sign In
