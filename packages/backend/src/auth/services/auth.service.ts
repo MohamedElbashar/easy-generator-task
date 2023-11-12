@@ -16,7 +16,8 @@ export class AuthService {
     password,
     userName,
   }: CreateUserDTO): Promise<AuthCode> {
-    const user = await users.findUser({ email });
+    const currentEmail = email.toLowerCase();
+    const user = await users.findUser({ email: currentEmail });
     if (user) {
       throw new HttpException('Email already exists', HttpStatus.BAD_REQUEST);
     }
