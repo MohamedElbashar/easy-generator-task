@@ -1,6 +1,6 @@
+import axios from 'axios';
 import { useState } from 'react';
 import Logo from './helper/logo';
-import axios from 'axios';
 
 const SIGNIN_URL =
   'https://easy-generator-task-production.up.railway.app/api/auth/OAuth';
