@@ -1,19 +1,10 @@
 import mongoose from 'mongoose';
 import { type IUser } from './users.interface';
-import { ObjectId } from 'bson';
 const usersSchema = new mongoose.Schema<IUser>(
   {
     password: {
       type: String,
       required: true,
-      validate: {
-        validator: function (v: any) {
-          const passwordRegex =
-            /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]+$/;
-          return passwordRegex.test(v);
-        },
-        message: 'Password does not meet the requirements.',
-      },
     },
     email: {
       type: String,
