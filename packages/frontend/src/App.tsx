@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Main from './components/main';
+import SignIn from './components/signIn';
+import SignUp from './components/signUp';
+import Welcome from './components/welcome';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="bg-red-500 text-yellow-400">
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/signIn" Component={SignIn} />
+        <Route path="/signUp" Component={SignUp} />
+        <Route path="/" Component={Main} />
+        <Route path="/welcome" Component={Welcome} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
