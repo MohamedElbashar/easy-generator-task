@@ -36,7 +36,8 @@ const SignUp = () => {
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        setError('Invalid email or password');
+        console.log(error);
+        setError(error.response?.data.error.message);
       } else {
         setError('An unexpected error occurred');
       }
@@ -139,7 +140,7 @@ const SignUp = () => {
 
             {error && (
               <div className="mt-4 text-center text-red-500">
-                <p>Email or password did not match</p>
+                <p>{error}</p>
               </div>
             )}
           </div>
